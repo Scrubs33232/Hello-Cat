@@ -1,0 +1,64 @@
+@media (max-width: 700px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+    gap: 16px;
+  }
+
+  .member-card {
+    padding: 24px 14px 22px;
+  }
+
+  .member-card__ring {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 420px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 860px) {
+  .gate__cat {
+    opacity: 0.35;
+    width: 70vw;
+  }
+
+  .topbar__name {
+    display: none;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .tabs--mobile.is-open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .main {
+    padding: 40px 20px 60px;
+  }
+}
+
+@media (max-width: 520px) {
+  .gate__title {
+    font-size: 2rem;
+  }
+
+  .discord-card {
+    padding: 32px 22px;
+  }
+
+  .discord-card__stats {
+    gap: 24px;
+  }
+}

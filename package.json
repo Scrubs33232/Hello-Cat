@@ -1,0 +1,13 @@
+{
+  "name": "hello-cat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hello Cat (HC) community site",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

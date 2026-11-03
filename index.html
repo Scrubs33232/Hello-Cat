@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hello Cat (HC) is a hacking and development collective focused on cybersecurity, programming, reverse engineering, and electronics.">
+<meta name="theme-color" content="#0a0613">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Hello Cat">
+<meta property="og:description" content="Hello Cat (HC) is a hacking and development collective focused on cybersecurity, programming, reverse engineering, and electronics.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.webp">
+<title>Hello Cat</title>
+<link rel="icon" href="assets/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css?v=3">
+<link rel="stylesheet" href="css/variables.css?v=3">
+<link rel="stylesheet" href="css/gate.css?v=3">
+<link rel="stylesheet" href="css/layout.css?v=3">
+<link rel="stylesheet" href="css/components.css?v=3">
+<link rel="stylesheet" href="css/tabs.css?v=3">
+<link rel="stylesheet" href="css/modal.css?v=3">
+<link rel="stylesheet" href="css/animations.css?v=3">
+<link rel="stylesheet" href="css/responsive.css?v=3">
+<link rel="stylesheet" href="css/music-player.css?v=3">
+</head>
+<body>
+
+<div id="gate" class="gate">
+  <div class="gate__bg"></div>
+
+  <div class="gate__content">
+    <img class="logo logo--xl" src="assets/logo.webp" alt="Hello Cat">
+    <h1 class="gate__title">HELLO CAT</h1>
+    <p class="gate__subtitle">A private community for those who belong.</p>
+    <button id="enterBtn" class="btn btn--enter" type="button">
+      <span>Click to Enter</span>
+    </button>
+  </div>
+
+  <div class="gate__footer">est. 2026 &mdash; members only</div>
+</div>
+
+<div id="app" class="app" hidden>
+  <header class="topbar">
+    <div class="topbar__brand">
+      <img class="logo logo--sm" src="assets/logo.webp" alt="Hello Cat">
+      <span class="topbar__name">HELLO CAT</span>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Main navigation">
+      <span class="tabs__indicator" aria-hidden="true"></span>
+      <button class="tabs__item is-active" role="tab" aria-selected="true" data-tab="faces" type="button">Faces of HC</button>
+      <button class="tabs__item" role="tab" aria-selected="false" data-tab="discord" type="button">Discord</button>
+      <button class="tabs__item" role="tab" aria-selected="false" data-tab="store" type="button">Store</button>
+    </nav>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="tabs tabs--mobile" id="mobileTabs" role="tablist" aria-label="Main navigation mobile" hidden>
+    <span class="tabs__indicator" aria-hidden="true"></span>
+    <button class="tabs__item is-active" role="tab" aria-selected="true" data-tab="faces" type="button">Faces of HC</button>
+    <button class="tabs__item" role="tab" aria-selected="false" data-tab="discord" type="button">Discord</button>
+    <button class="tabs__item" role="tab" aria-selected="false" data-tab="store" type="button">Store</button>
+  </nav>
+
+  <main class="main">
+
+    <section class="panel is-active" id="panel-faces" role="tabpanel">
+      <div class="section-head">
+        <h2>Faces of HC</h2>
+        <p>Meet the members behind the name.</p>
+      </div>
+      <div class="members-grid" id="membersGrid"></div>
+    </section>
+
+    <section class="panel" id="panel-discord" role="tabpanel" hidden>
+      <div class="section-head">
+        <h2>Join the Discord</h2>
+        <p>Come hang out, chat, and stay up to date.</p>
+      </div>
+      <div class="discord-card">
+        <div class="discord-card__icon">
+          <img src="assets/discord-icon.webp" alt="Hello Cat">
+        </div>
+        <h3 class="discord-card__title" id="discordName">Hello Cat</h3>
+        <p class="discord-card__desc">Hello Cat (HC) is a hacking and development collective focused on cybersecurity, programming, reverse engineering, and electronics. Explore projects, collaborate, and join the team through technical challenges.</p>
+        <div class="discord-card__stats">
+          <div>
+            <strong id="onlineCount">0</strong>
+            <span><i class="online-dot"></i>Online Now</span>
+          </div>
+        </div>
+        <a class="btn btn--discord" id="discordInvite" href="https://discord.gg/" target="_blank" rel="noopener noreferrer">Join Server</a>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-store" role="tabpanel" hidden>
+      <div class="section-head">
+        <h2>Store</h2>
+        <p>Official Hello Cat items and perks.</p>
+      </div>
+      <div class="store-grid" id="storeGrid" hidden></div>
+      <div class="coming-soon" id="storeEmpty">
+        <span class="coming-soon__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+        </span>
+        <h3 class="coming-soon__title">Coming Soon</h3>
+        <p class="coming-soon__desc">The store is still brewing. Check back soon.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Hello Cat. <button class="footer-link" id="disclaimerTrigger" type="button">All rights reserved.</button></span>
+  </footer>
+
+  <div class="music-player" id="musicPlayer">
+    <audio id="musicPlayerAudio" src="assets/audio/eclipse.mp3" preload="metadata" loop></audio>
+    <div class="music-player__bar">
+      <span class="music-player__label">Now Playing</span>
+      <button class="music-player__toggle" id="musicPlayerToggle" type="button" aria-label="Toggle player">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+    <div class="music-player__frame-wrap">
+      <div class="music-player__controls">
+        <button class="music-player__vinyl" id="musicPlayerPlay" type="button" aria-label="Play">
+          <span class="music-player__vinyl-disc">
+            <span class="music-player__vinyl-label"></span>
+          </span>
+          <span class="music-player__play-icon">
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </span>
+        </button>
+        <div class="music-player__meta">
+          <div class="music-player__track">Eclipse</div>
+          <div class="music-player__artist">Hotel Pools</div>
+          <div class="music-player__progress">
+            <div class="music-player__progress-fill" id="musicPlayerProgressFill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="disclaimerModal" hidden>
+  <div class="modal__overlay" id="disclaimerOverlay"></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
+    <button class="modal__close" id="disclaimerClose" type="button" aria-label="Close">&times;</button>
+    <h3 class="modal__title" id="disclaimerTitle">Responsible Use &amp; Disclaimer</h3>
+    <p>Hello Cat develops software for educational, research, and authorized security testing purposes.</p>
+    <p>We do not condone or encourage malicious activity, unauthorized access, or unlawful use of our software.</p>
+    <p>Users are responsible for ensuring their use of HC software complies with applicable laws and regulations. Hello Cat does not endorse or authorize the misuse of its tools.</p>
+  </div>
+</div>
+
+<script src="js/data.js?v=3"></script>
+<script src="js/gate.js?v=3"></script>
+<script src="js/tabs.js?v=3"></script>
+<script src="js/modal.js?v=3"></script>
+<script src="js/render.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+<script src="js/music-player.js?v=3"></script>
+</body>
+</html>
