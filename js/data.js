@@ -8,5 +8,7 @@ const HC_DATA = {
     { name: "Trunith", role: "Lead Dev", bio: "“Code runs logic; execution makes capital.”", pfp: "assets/members/trunith.png" },
     { name: "z0", role: "Dev", bio: "“and Michael Mullvad descended from the heavens, proclaiming, ‘fear not, my child, for I shall protect thee from the feds.’”", pfp: "assets/members/z0.webp" }
   ],
-  store: []
+  store: [
+    { name: "New Item", desc: "Add a description here.", price: "$4.99", image: "", badge: "", link: "" }
+  ]
 };
