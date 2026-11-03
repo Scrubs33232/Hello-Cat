@@ -9,6 +9,6 @@ const HC_DATA = {
     { name: "z0", role: "Dev", bio: "“and Michael Mullvad descended from the heavens, proclaiming, ‘fear not, my child, for I shall protect thee from the feds.’”", pfp: "assets/members/z0.webp" }
   ],
   store: [
-    { name: "Hc Rat", desc: "This is HC Custom made RAT", price: "$4.99", image: "assets/members/HC Cat.png", badge: "", link: "" }
+    { name: "Hc Rat", desc: "This is HC Custom made RAT", price: "$4.99", image: "assets/members/cat.png", badge: "", link: "" }
   ]
 };
